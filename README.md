@@ -108,4 +108,3 @@ A roommate listing and booking platform for students and travelers.
 ---
 
 > “Code is like humor. When you have to explain it, it’s bad.” – Cory House
->>>>>>> 829d547814b6b2b5c5e95ef647c482932066ca69
