@@ -8,11 +8,136 @@ html {
 .custom-cursor {
     width: 20px;
     height: 20px;
-    border: 2px solid #009dff;
+    border: 2px solid #0059ff;
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
     z-index: 9999;
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(270deg, #1e3c72, #2a5298, #1e90ff);
+    /* blue gradient */
+    background-size: 600% 600%;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        0 0 8px 2px rgba(30, 144, 255, 0.7);
+    /* dodger blue glow */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    animation: ripple 2s infinite, glowPulseHover 1.5s ease-in-out infinite;
+    color: #cce6ff;
+    /* lighter blue text on hover */
+}
+
+/* Ripple animation */
+@keyframes ripple {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.3),
+            0 0 8px 2px rgba(30, 144, 255, 0.7);
+        /* dodger blue */
+    }
+
+    50% {
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.3),
+            0 0 20px 6px rgb(30, 144, 255);
+    }
+}
+
+/* Stronger glow on hover */
+@keyframes glowPulseHover {
+
+    0%,
+    100% {
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.3),
+            0 0 20px 6px rgb(65, 105, 225);
+        /* royal blue */
+    }
+
+    50% {
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.3),
+            0 0 30px 10px rgb(30, 144, 255);
+        /* dodger blue */
+    }
+}
+
+/* Optional: subtle water ripple wave inside */
+.scroll-to-top-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(173, 216, 230, 0.15);
+    /* light blue ripple */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: waterRipple 3s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes waterRipple {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.1;
+    }
 }

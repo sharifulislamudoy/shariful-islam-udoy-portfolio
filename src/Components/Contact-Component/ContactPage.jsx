@@ -1,15 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
 import BackGroundImg from '../../assets/BackGround5.jpg';
 
 const ContactPage = () => {
-    const [emailData, setEmailData] = useState({ to: '', body: '' });
+    const [emailData, setEmailData] = useState({ from: '', body: '' });
+    const [sending, setSending] = useState(false);
 
-    const handleSend = () => {
-        const mailtoLink = `mailto:${emailData.to}?body=${encodeURIComponent(emailData.body)}`;
-        window.location.href = mailtoLink;
+    const handleSend = async () => {
+        if (!emailData.from || !emailData.body) {
+            return alert('Please fill in both fields');
+        }
+
+        setSending(true);
+
+        const templateParams = {
+            from_email: emailData.from,
+            message: emailData.body,
+        };
+
+        try {
+            await emailjs.send(
+                'service_6tsukyj', // your Service ID
+                'template_jlvarab', // your Template ID
+                templateParams,
+                'zuZo7fy02LzGTazcc' // your Public Key
+            );
+            alert('Email sent successfully!');
+            setEmailData({ from: '', body: '' });
+        } catch (error) {
+            console.error('Email send failed:', error);
+            alert('Failed to send email. Please try again later.');
+        } finally {
+            setSending(false);
+        }
     };
+
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
@@ -27,27 +54,37 @@ const ContactPage = () => {
                         Get in Touch
                     </h2>
                     <p data-aos="fade-right" className="text-gray-400 mb-8">Feel free to reach out through any platform below or send me an email directly.</p>
-                    <ul className="space-y-4 text-lg">
-                        <li data-aos="fade-right">
+                    <ul data-aos="fade-right" className="space-y-4 text-lg">
+                        <li>
                             <span className="text-blue-500 font-semibold">Facebook:</span>{' '}
-                            <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
-                                facebook.com/your-profile
+                            <a href="https://www.facebook.com/sharifulislamudoy56/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                facebook.com/sharifulislamudoy56/
                             </a>
                         </li>
-                        <li data-aos="fade-right">
+                        <li>
                             <span className="text-blue-500 font-semibold">GitHub:</span>{' '}
-                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
-                                github.com/yourusername
+                            <a href="https://github.com/sharifulislamudoy" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                github.com/sharifulislamudoy
                             </a>
                         </li>
-                        <li data-aos="fade-right">
+                        <li>
                             <span className="text-blue-500 font-semibold">LinkedIn:</span>{' '}
-                            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
-                                linkedin.com/in/your-profile
+                            <a href="https://www.linkedin.com/in/shariful-islam-940248372/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                linkedin.com/in/shariful-islam-940248372/
                             </a>
                         </li>
-                        {/* Add other platforms as needed */}
+                        <li>
+                            <span className="text-blue-500 font-semibold">WhatsApp:</span>{' '}
+                            <a href="https://wa.me/8801609359736" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                +8801609359736
+                            </a>
+                        </li>
+                        <li>
+                            <span className="text-blue-500 font-semibold">Phone:</span>{' '}
+                            <span className="text-gray-300">+8801609359736</span>
+                        </li>
                     </ul>
+
                 </div>
 
                 {/* Right: Email Form */}
@@ -55,12 +92,12 @@ const ContactPage = () => {
                     <h3 className="text-2xl font-semibold mb-6 text-green-400">Send Email</h3>
                     <div className="flex flex-col gap-4">
                         <div>
-                            <label className="block text-gray-300 mb-1">To</label>
+                            <label className="block text-gray-300 mb-1">From</label>
                             <input
                                 type="email"
                                 placeholder="example@email.com"
-                                value={emailData.to}
-                                onChange={(e) => setEmailData({ ...emailData, to: e.target.value })}
+                                value={emailData.from}
+                                onChange={(e) => setEmailData({ ...emailData, from: e.target.value })}
                                 className="w-full px-4 py-2 bg-transparent text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]"
                             />
                         </div>
@@ -76,9 +113,10 @@ const ContactPage = () => {
                         </div>
                         <button
                             onClick={handleSend}
-                            className="mt-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition"
+                            disabled={sending}
+                            className={`mt-2 px-6 py-2 rounded-lg font-medium transition ${sending ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
                         >
-                            Send Email
+                            {sending ? 'Sending...' : 'Send Email'}
                         </button>
                     </div>
                 </div>

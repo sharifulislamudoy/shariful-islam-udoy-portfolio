@@ -46,6 +46,15 @@ const Navbar = () => {
             ))}
         </>
     );
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'Shariful_Islam_Udoy.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
 
     return (
         <div className="bg-black shadow-lg fixed top-0 left-0 right-0 z-50 w-full">
@@ -69,9 +78,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="inline-block btn px-6 py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-[#0c1db4] to-[#0b90cd] hover:opacity-90 hover:scale-105 transition-transform duration-300 shadow-lg">
+                    <button
+                        onClick={handleDownload}
+                        className="inline-block btn px-6 py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-[#0c1db4] to-[#0b90cd] hover:opacity-90 hover:scale-105 transition-transform duration-300 shadow-lg">
                         Resume
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
