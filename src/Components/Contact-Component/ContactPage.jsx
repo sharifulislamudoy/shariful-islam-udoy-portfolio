@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+// import 'sweetalert2/src/sweetalert2.scss';
+import 'animate.css';
 import BackGroundImg from '../../assets/BackGround5.jpg';
 
 const ContactPage = () => {
@@ -10,7 +13,20 @@ const ContactPage = () => {
 
     const handleSend = async () => {
         if (!emailData.from || !emailData.body) {
-            return alert('Please fill in both fields');
+            return Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Please fill in both fields!',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                customClass: {
+                    popup: 'glow-blue'
+                }
+            });
         }
 
         setSending(true);
@@ -22,20 +38,47 @@ const ContactPage = () => {
 
         try {
             await emailjs.send(
-                'service_6tsukyj', // your Service ID
-                'template_jlvarab', // your Template ID
+                'service_6tsukyj',
+                'template_jlvarab',
                 templateParams,
-                'zuZo7fy02LzGTazcc' // your Public Key
+                'zuZo7fy02LzGTazcc'
             );
-            alert('Email sent successfully!');
+            Swal.fire({
+                icon: 'success',
+                title: 'Email Sent!',
+                text: 'Your message has been sent successfully.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                customClass: {
+                    popup: 'glow-blue'
+                }
+            });
             setEmailData({ from: '', body: '' });
         } catch (error) {
             console.error('Email send failed:', error);
-            alert('Failed to send email. Please try again later.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Failed!',
+                text: 'Failed to send email. Please try again later.',
+                showClass: {
+                    popup: 'animate__animated animate__shakeX'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                customClass: {
+                    popup: 'glow-blue'
+                }
+            });
         } finally {
             setSending(false);
         }
     };
+
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
