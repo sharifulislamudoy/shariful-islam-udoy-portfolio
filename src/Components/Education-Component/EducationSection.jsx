@@ -18,7 +18,7 @@ const EducationSection = () => {
                     Education
                 </h2>
 
-                <div className="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-[1.02] transition-transform duration-300">
+                <div className="backdrop-blur-5xl rounded-xl p-6 shadow-lg hover:scale-[1.02] transition-transform duration-300">
                     <div className="flex justify-between items-center flex-wrap mb-2">
                         <h3 data-aos="fade-right" className="text-2xl font-semibold text-blue-400">
                             B.Sc. Honours in Mathematics
