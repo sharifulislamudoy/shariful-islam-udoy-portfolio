@@ -16,7 +16,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className="custom-cursor"
+      className="custom-cursor hidden lg:flex"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
 import BackGroundImg from '../../assets/BackgroundImg.jpg';
-import HeroImg from '../../assets/Shariful_islam_udoy-dark-image.jpg';
+import HeroImg from '../../assets/Shariful_islam_udoy-dark-image3.png';
 
 const HeroSection = () => {
     const developerText = [
@@ -20,6 +20,7 @@ const HeroSection = () => {
 
     return (
         <div
+            id="hero"
             className="min-h-screen hero"
             style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
@@ -33,11 +34,11 @@ const HeroSection = () => {
                         />
                     </div>
                     <div className='flex-1' data-aos="fade-left">
-                        <h1 className="lg:text-4xl text-3xl font-extrabold bg-gradient-to-r from-[#0bd6ff] to-[#059ee5] bg-clip-text text-transparent tracking-wide animate-pulse drop-shadow-lg">
+                        <h1 className="lg:text-4xl text-3xl font-extrabold bg-gradient-to-r from-[#0b91ff] to-[#059ee5] bg-clip-text text-transparent tracking-wide animate-pulse drop-shadow-lg">
                             I'm Shariful Islam Udoy
                         </h1>
                         <div className="mt-4">
-                            <p className="text-md lg:text-xl text-gray font-mono min-h-[2.5rem]">
+                            <p className="text-md lg:text-xl text-white font-mono min-h-[2.5rem]">
                                 <Typewriter
                                     options={{
                                         strings: developerText,
