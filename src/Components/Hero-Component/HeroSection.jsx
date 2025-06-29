@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Typewriter from 'typewriter-effect';
 import BackGroundImg from '../../assets/BackgroundImg.jpg';
 import HeroImg from '../../assets/Shariful_islam_udoy-dark-image.jpg';
 
@@ -13,35 +14,9 @@ const HeroSection = () => {
         "Modern Dev | Always Learning",
     ];
 
-
-    const [displayText, setDisplayText] = useState("");
-    const [activeText, setActiveText] = useState(developerText[0]);
-    const [textIndex, setTextIndex] = useState(0);
-    const [charIndex, setCharIndex] = useState(0);
-
     useEffect(() => {
         AOS.init({ duration: 1000 });
-
-        if (charIndex < developerText[textIndex].length) {
-            const timeout = setTimeout(() => {
-                setDisplayText((prev) => prev + developerText[textIndex][charIndex]);
-                setCharIndex(charIndex + 1);
-            }, 80); // Typing speed
-
-            return () => clearTimeout(timeout);
-        } else {
-            // When a line finishes typing
-            setActiveText(developerText[textIndex]);
-
-            const timeout = setTimeout(() => {
-                setTextIndex((prev) => (prev + 1) % developerText.length);
-                setCharIndex(0);
-                setDisplayText("");
-            }, 2500); // Pause before next line
-
-            return () => clearTimeout(timeout);
-        }
-    }, [charIndex, textIndex]);
+    }, []);
 
     return (
         <div
@@ -62,8 +37,19 @@ const HeroSection = () => {
                             I'm Shariful Islam Udoy
                         </h1>
                         <div className="mt-4">
-                            <p className="text-md lg:text-xl text-gray-200 font-mono min-h-[2.5rem]">
-                                {displayText || activeText}
+                            <p className="text-md lg:text-xl text-gray font-mono min-h-[2.5rem]">
+                                <Typewriter
+                                    options={{
+                                        strings: developerText,
+                                        autoStart: true,
+                                        loop: true,
+                                        deleteSpeed: 40,
+                                        delay: 80,
+                                        pauseFor: 2500,
+                                        cursor: '|',
+                                        cursorClassName: 'text-gray-500',
+                                    }}
+                                />
                             </p>
                         </div>
 
@@ -79,7 +65,6 @@ const HeroSection = () => {
                             Resume
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
