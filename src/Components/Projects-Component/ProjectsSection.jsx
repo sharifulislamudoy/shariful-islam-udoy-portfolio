@@ -17,7 +17,7 @@ const ProjectsSection = () => {
             className=" bg-cover bg-center text-white py-16 px-6"
             style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
-            <div className="max-w-6xl mx-auto">
+            <div className="w-11/12 mx-auto">
                 <h2
                     data-aos="fade-right"
                     className="text-4xl font-bold mb-12 text-center border-b-4 border-blue-500 inline-block pb-2"
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
                     {/* ===== Project 1 - Rentizo ===== */}
                     <div
                         data-aos="fade-up"
-                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-3xl p-6 rounded-xl shadow-lg hover:scale-[1.01] transition-transform duration-300"
+                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-2xl p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300 border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]"
                     >
                         {/* Project Image */}
                         <div className="md:w-1/2 w-full">
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
                     {/* ===== Project 2 - SecurePay ===== */}
                     <div
                         data-aos="fade-up"
-                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-3xl p-6 rounded-xl shadow-lg hover:scale-[1.01] transition-transform duration-300"
+                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-2xl p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300 border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]"
                     >
                         {/* Project Image */}
                         <div className="md:w-1/2 w-full">
@@ -160,7 +160,7 @@ const ProjectsSection = () => {
                     {/* ===== Project 3 - Roomivio ===== */}
                     <div
                         data-aos="fade-up"
-                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-3xl p-6 rounded-xl shadow-lg hover:scale-[1.01] transition-transform duration-300"
+                        className="flex flex-col md:flex-row gap-8 mb-16 items-center backdrop-blur-2xl p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300 border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]"
                     >
                         {/* Project Image */}
                         <div className="md:w-1/2 w-full">

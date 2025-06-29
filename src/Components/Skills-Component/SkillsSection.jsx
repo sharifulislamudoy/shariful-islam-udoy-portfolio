@@ -23,7 +23,8 @@ const SkillsSection = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {/* Frontend */}
-                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg shadow-2xl text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl">
+                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]"
+                    >
                         <h3 className="text-xl font-semibold mb-4 text-blue-400">Frontend</h3>
                         <ul className="space-y-2 text-gray-300">
                             <li>HTML5 & CSS3</li>
@@ -35,7 +36,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* Backend */}
-                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg shadow-2xl text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl">
+                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]">
                         <h3 className="text-xl font-semibold mb-4 text-green-400">Backend</h3>
                         <ul className="space-y-2 text-gray-300">
                             <li>Node.js & Express</li>
@@ -47,7 +48,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* Tools & Platforms */}
-                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg shadow-2xl text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl">
+                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]">
                         <h3 className="text-xl font-semibold mb-4 text-yellow-400">Tools & Platforms</h3>
                         <ul className="space-y-2 text-gray-300">
                             <li>Git & GitHub</li>
@@ -59,7 +60,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* Soft Skills */}
-                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg shadow-2xl text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl">
+                    <div data-aos="fade-up" className="skill-card p-6 rounded-lg text-center hover:scale-105 transition-transform duration-300 backdrop-blur-2xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]">
                         <h3 className="text-xl font-semibold mb-4 text-pink-400">Soft Skills</h3>
                         <ul className="space-y-2 text-gray-300">
                             <li>Problem Solving</li>

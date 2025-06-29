@@ -24,7 +24,8 @@ const AboutSection = () => {
             <div className="w-5/6 mx-auto">
                 <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-10">
                     {/* Left Content */}
-                    <div data-aos="fade-up" className="flex-1 bg-black/40 backdrop-blur-md p-6 rounded-xl shadow-lg">
+                    {/* border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)] */}
+                    <div data-aos="fade-up" className="flex-1 bg-black/40 backdrop-blur-md p-6 rounded-xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]">
                         <div>
                             <h3 className="text-xl font-semibold mb-4">Tech Stack</h3>
                             <ul className="grid grid-cols-2 gap-y-2 list-disc list-inside">
@@ -39,7 +40,7 @@ const AboutSection = () => {
                     </div>
 
                     {/* Right Content */}
-                    <div data-aos="fade-down" className="flex-1 bg-black/40 backdrop-blur-md p-6 rounded-xl shadow-lg">
+                    <div data-aos="fade-down" className="flex-1 bg-black/40 backdrop-blur-md p-6 rounded-xl border-l-4 border-blue-500 shadow-[0_0_15px_0_rgba(59,130,246,0.7)]">
                         <h2 className="text-3xl font-bold mb-4 border-b-2 border-blue-400 inline-block">
                             About Me
                         </h2>
