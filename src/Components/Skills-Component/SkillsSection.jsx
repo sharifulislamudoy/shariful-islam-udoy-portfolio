@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BackGroundImg from '../../assets/BackGround16.jpg';
+import BackGroundImg from '../../assets/BackGround14.jpg';
 
 const SkillsSection = () => {
     useEffect(() => {

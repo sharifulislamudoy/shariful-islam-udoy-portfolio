@@ -1,7 +1,12 @@
-import React from 'react';
-import BackGroundImg from '../../assets/BackGround13.jpg';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import BackGroundImg from '../../assets/BackGround17.jpg';
 
 const ExperienceSection = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
     const experiences = [
         {
             title: 'Full Stack Web Developer',
@@ -32,18 +37,19 @@ const ExperienceSection = () => {
     return (
         <section
             id="experience"
-            className="bg-cover bg-center text-white py-16 px-6"
+            className="bg-center text-white py-16 px-6"
             style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
 
             <div className="w-11/12 mx-auto">
-                <h2 className="text-4xl font-bold mb-8 text-center border-b-4 border-blue-500 inline-block pb-2">
+                <h2 data-aos="fade-right" className="text-4xl font-bold mb-8 text-center border-b-4 border-blue-500 inline-block pb-2">
                     Experience
                 </h2>
 
                 <div className="flex flex-col lg:flex-row gap-6">
                     {experiences.map((exp, index) => (
                         <div
+                            data-aos="fade-up"
                             key={index}
                             className="backdrop-blur-3xl rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300 shadow-lg"
                         >
