@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../src/index.css';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('hero');
@@ -70,7 +71,7 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-white text-2xl">SHARIF.</a>
+                    <Link to={'/'} className="btn btn-ghost text-white text-2xl">SHARIF.</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

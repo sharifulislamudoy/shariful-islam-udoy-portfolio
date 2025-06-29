@@ -83,6 +83,12 @@ const ProjectsSection = () => {
                                 >
                                     GitHub
                                 </a>
+                                <a
+                                    href="/projects/rentizo"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow"
+                                >
+                                    Learn More
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -141,6 +147,12 @@ const ProjectsSection = () => {
                                     className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow"
                                 >
                                     GitHub
+                                </a>
+                                <a
+                                    href="/projects/securepay"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow"
+                                >
+                                    Learn More
                                 </a>
                             </div>
                         </div>
@@ -201,6 +213,12 @@ const ProjectsSection = () => {
                                     className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow"
                                 >
                                     GitHub
+                                </a>
+                                <a
+                                    href="/projects/roomivio"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow"
+                                >
+                                    Learn More
                                 </a>
                             </div>
                         </div>
