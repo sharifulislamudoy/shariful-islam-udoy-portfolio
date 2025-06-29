@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BackGroundImg from '../../assets/BackGround12.jpg';
+import BackGroundImg from '../../assets/BackGround16.jpg';
 
 const SkillsSection = () => {
     useEffect(() => {
@@ -14,7 +14,7 @@ const SkillsSection = () => {
             style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
             <div className="max-w-5xl mx-auto">
-                <h2 data-aos="fade-right" className="text-4xl bg-black/40 backdrop-blur-md font-bold mb-8 text-center border-b-4 border-blue-500 inline-block pb-2">
+                <h2 data-aos="fade-right" className="text-4xl backdrop-blur-md font-bold mb-8 text-center border-b-4 border-blue-500 inline-block pb-2">
                     My Skills
                 </h2>
                 <p data-aos="zoom-in" className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
