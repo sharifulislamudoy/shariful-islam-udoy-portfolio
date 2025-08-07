@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BackGroundImg from '../../assets/BackGround18.jpg';
+import BackGroundImg from '../../assets/BackGround21.jpg';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 

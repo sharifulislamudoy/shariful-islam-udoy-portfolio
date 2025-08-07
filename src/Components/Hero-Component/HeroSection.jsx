@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
-import BackGroundImg from '../../assets/BackgroundImg.jpg';
+// import BackGroundImg from '../../assets/Background20.jpg';
 import HeroImg from '../../assets/Shariful_islam_udoy-dark-image3.png';
 
 const HeroSection = () => {
@@ -29,8 +29,8 @@ const HeroSection = () => {
     return (
         <div
             id="hero"
-            className="min-h-screen hero"
-            style={{ backgroundImage: `url(${BackGroundImg})` }}
+            className="min-h-screen hero bg-black"
+            // style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
             <div className='w-11/12 mx-auto'>
                 <div className="flex gap-5 justify-center items-center flex-col lg:flex-row">

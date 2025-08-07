@@ -3,9 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
-// import 'sweetalert2/src/sweetalert2.scss';
 import 'animate.css';
-import BackGroundImg from '../../assets/BackGround5.jpg';
+import BackGroundImg from '../../assets/BackGround14.jpg';
 
 const ContactPage = () => {
     const [emailData, setEmailData] = useState({ from: '', body: '' });

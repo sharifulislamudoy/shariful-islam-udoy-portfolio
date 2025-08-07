@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BackGroundImg from '../../assets/BackGround17.jpg';
+import BackGroundImg from '../../assets/BackGround14.jpg';
 
 const ExperienceSection = () => {
     useEffect(() => {
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
     return (
         <section
             id="experience"
-            className="bg-center text-white py-16 px-6"
+            className="bg-center text-white py-16 px-6 bg-cover"
             style={{ backgroundImage: `url(${BackGroundImg})` }}
         >
 
