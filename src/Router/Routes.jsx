@@ -6,6 +6,7 @@ import Home from "../Pages/Home";
 import RentizoDetails from "../Components/Projects-Component/RentizoDetails";
 import SecurePayDetails from "../Components/Projects-Component/SecurePayDetails";
 import RoomivioDetails from "../Components/Projects-Component/RoomivioDetails";
+import MediHurtDetails from "../Components/Projects-Component/MediHurtDetails";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
         {
             index: true,
             Component: Home,
+        },
+        {
+          path: '/projects/medi-hurt',
+          Component: MediHurtDetails,
         },
         {
           path: '/projects/rentizo',
