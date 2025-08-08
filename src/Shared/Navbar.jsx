@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../../src/index.css';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('hero');
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    // Scroll handler - only works if on homepage
     const handleScroll = () => {
         const sections = ['hero', 'about-me', 'skills', 'experience', 'education', 'projects', 'contact'];
         for (let id of sections) {
@@ -20,9 +23,48 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        if (location.pathname === '/') {
+            window.addEventListener('scroll', handleScroll);
+            // run once on mount to set active section
+            handleScroll();
+        } else {
+            // If not homepage, clear activeSection or set to ''
+            setActiveSection('');
+            window.removeEventListener('scroll', handleScroll);
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [location.pathname]);
+
+    // Smooth scroll to section function
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    // Nav click handler to support scrolling or routing
+    const handleNavClick = (id, e) => {
+        e.preventDefault();
+
+        if (location.pathname === '/') {
+            // On homepage: scroll to section directly
+            scrollToSection(id);
+            setActiveSection(id);
+        } else {
+            // On other page: navigate to home with hash then scroll after load
+            navigate(`/#${id}`);
+
+            // Wait a bit and scroll (you can also listen for route changes if needed)
+            setTimeout(() => {
+                scrollToSection(id);
+                setActiveSection(id);
+            }, 100);
+        }
+    };
 
     const navItems = (
         <>
@@ -39,7 +81,7 @@ const Navbar = () => {
                         href={`#${id}`}
                         className={`py-2 relative font-medium text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-blue-500 after:transition-all after:duration-300 ${activeSection === id ? 'after:w-full text-blue-400' : 'after:w-0 hover:after:w-full'
                             }`}
-                        onClick={() => setActiveSection(id)}
+                        onClick={(e) => handleNavClick(id, e)}
                     >
                         {label}
                     </a>
@@ -47,6 +89,7 @@ const Navbar = () => {
             ))}
         </>
     );
+
     const handleDownload = () => {
         const link = document.createElement('a');
         link.href = '/resume.pdf';
@@ -55,7 +98,6 @@ const Navbar = () => {
         link.click();
         document.body.removeChild(link);
     };
-
 
     return (
         <div className="bg-black shadow-lg fixed top-0 left-0 right-0 z-50 w-full">
