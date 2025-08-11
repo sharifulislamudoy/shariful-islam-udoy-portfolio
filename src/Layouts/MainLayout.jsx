@@ -4,6 +4,7 @@ import { Outlet, useNavigation } from 'react-router';
 import CustomCursor from '../Components/CustomCursor/CustomCursor';
 import ScrollToTopButton from '../Components/ScrollToTopButton/ScrollToTopButton';
 import LoadingSpinner from '../Components/LoadingSpinner/LoadingSpinner';
+import SocialAside from '../Components/SocialAside-Component/SocialAside';
 
 const MainLayout = () => {
     const navigation = useNavigation();
@@ -13,7 +14,10 @@ const MainLayout = () => {
             {isLoading && <LoadingSpinner />}
             <CustomCursor />
             <Navbar />
-            <Outlet />
+            <div className='flex gap-2'>
+                <SocialAside /> 
+                <Outlet />
+            </div>
             <ScrollToTopButton />
         </div>
     );
