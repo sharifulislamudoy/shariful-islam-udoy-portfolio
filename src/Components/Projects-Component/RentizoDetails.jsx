@@ -47,6 +47,15 @@ const RentizoDetails = () => {
                     >
                         https://github.com/sharifulislamudoy/Rentizo-Client
                     </a>
+                    <h2 className="text-2xl font-semibold mb-2">GitHub Repository (Server)</h2>
+                    <a
+                        href="https://github.com/sharifulislamudoy/Rentizo-Server"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 underline mb-4 block"
+                    >
+                        https://github.com/sharifulislamudoy/Rentizo-Server
+                    </a>
 
                     <h2 className="text-2xl font-semibold mb-2">Challenges Faced</h2>
                     <ul className="list-disc list-inside mb-4">

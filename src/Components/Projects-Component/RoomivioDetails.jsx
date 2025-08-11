@@ -47,6 +47,15 @@ const RoomivioDetails = () => {
                     >
                         https://github.com/sharifulislamudoy/Romivio-client
                     </a>
+                    <h2 className="text-2xl font-semibold mb-2">GitHub Repository (Server)</h2>
+                    <a
+                        href="https://github.com/sharifulislamudoy/Romivio-server"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 underline mb-4 block"
+                    >
+                        https://github.com/sharifulislamudoy/Romivio-server
+                    </a>
 
                     <h2 className="text-2xl font-semibold mb-2">Challenges Faced</h2>
                     <ul className="list-disc list-inside mb-4">
