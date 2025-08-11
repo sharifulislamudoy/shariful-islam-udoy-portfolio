@@ -99,8 +99,8 @@ const ContactPage = () => {
                     <ul data-aos="fade-right" className="space-y-4 text-lg">
                         <li>
                             <span className="text-blue-500 font-semibold">Facebook:</span>{' '}
-                            <a href="https://www.facebook.com/sharifulislamudoy56/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
-                                facebook.com/sharifulislamudoy56/
+                            <a href="https://www.facebook.com/sharifulislamudoy1025/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                facebook.com/sharifulislamudoy1025
                             </a>
                         </li>
                         <li>
@@ -111,8 +111,8 @@ const ContactPage = () => {
                         </li>
                         <li>
                             <span className="text-blue-500 font-semibold">LinkedIn:</span>{' '}
-                            <a href="https://www.linkedin.com/in/shariful-islam-940248372/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
-                                linkedin.com/in/shariful-islam-940248372/
+                            <a href="https://www.linkedin.com/in/shariful-islam-udoy/" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-300">
+                                linkedin.com/in/shariful-islam-udoy
                             </a>
                         </li>
                         <li>

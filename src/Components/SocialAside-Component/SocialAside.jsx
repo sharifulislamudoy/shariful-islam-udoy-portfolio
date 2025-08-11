@@ -7,31 +7,31 @@ const SocialAside = () => {
         {
             name: 'GitHub',
             icon: <FaGithub className="text-2xl" />,
-            url: 'https://github.com/yourusername',
+            url: 'https://github.com/sharifulislamudoy',
             color: 'hover:text-gray-400'
         },
         {
             name: 'LinkedIn',
             icon: <FaLinkedin className="text-2xl" />,
-            url: 'https://linkedin.com/in/yourprofile',
+            url: 'https://www.linkedin.com/in/shariful-islam-udoy/',
             color: 'hover:text-blue-400'
         },
         {
             name: 'Facebook',
             icon: <FaFacebook className="text-2xl" />,
-            url: 'https://facebook.com/yourprofile',
+            url: 'https://www.facebook.com/sharifulislamudoy1025/',
             color: 'hover:text-blue-500'
         },
         {
             name: 'Gmail',
             icon: <SiGmail className="text-2xl" />,
-            url: 'mailto:youremail@gmail.com',
+            url: 'mailto:sharifulislamudoy56@gmail.com',
             color: 'hover:text-red-400'
         },
         {
             name: 'WhatsApp',
             icon: <FaWhatsapp className="text-2xl" />,
-            url: 'https://wa.me/yournumber',
+            url: 'https://wa.me/8801609359736',
             color: 'hover:text-green-400'
         }
     ];
