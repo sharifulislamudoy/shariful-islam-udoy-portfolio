@@ -45,7 +45,7 @@ const RoomivioDetails = () => {
                         rel="noopener noreferrer"
                         className="text-blue-400 underline mb-4 block"
                     >
-                        https://github.com/sharifulislamudoy/Romivio-client
+                        Romivio-client
                     </a>
                     <h2 className="text-2xl font-semibold mb-2">GitHub Repository (Server)</h2>
                     <a
@@ -54,7 +54,7 @@ const RoomivioDetails = () => {
                         rel="noopener noreferrer"
                         className="text-blue-400 underline mb-4 block"
                     >
-                        https://github.com/sharifulislamudoy/Romivio-server
+                        Romivio-server
                     </a>
 
                     <h2 className="text-2xl font-semibold mb-2">Challenges Faced</h2>

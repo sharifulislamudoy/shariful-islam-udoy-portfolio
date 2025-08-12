@@ -46,7 +46,7 @@ const MediHurtDetails = () => {
                         rel="noopener noreferrer"
                         className="text-blue-400 underline mb-4 block"
                     >
-                        https://github.com/sharifulislamudoy/Medi-Hurt-Client
+                        Medi-Hurt-Client
                     </a>
 
                     <h2 className="text-2xl font-semibold mb-2">GitHub Repository (Server)</h2>
@@ -56,7 +56,7 @@ const MediHurtDetails = () => {
                         rel="noopener noreferrer"
                         className="text-blue-400 underline mb-4 block"
                     >
-                        https://github.com/sharifulislamudoy/Medi-Hurt-Server
+                        Medi-Hurt-Server
                     </a>
 
                     <h2 className="text-2xl font-semibold mb-2">Challenges Faced</h2>
